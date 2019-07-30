@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="OpenSans-Regular.ttf">
+            <string>OpenSans</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="CustomThanksView" customModule="AFBN" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Ni-Uh-OcJ">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UTW-GA-61g">
+                    <rect key="frame" x="10" y="194" width="355" height="279"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="forgotpassword_tic" translatesAutoresizingMaskIntoConstraints="NO" id="ZRN-xH-RuS">
+                            <rect key="frame" x="142.5" y="25" width="70" height="70"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="70" id="TZU-IS-BIv"/>
+                                <constraint firstAttribute="width" constant="70" id="bsA-ui-Fwa"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thank you," textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VeQ-dh-7Tc">
+                            <rect key="frame" x="112.5" y="105" width="130" height="25"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="25" id="hqd-i4-sZQ"/>
+                                <constraint firstAttribute="width" constant="130" id="sJD-4c-1Zn"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="18"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pbN-z5-940">
+                            <rect key="frame" x="26.5" y="135" width="302" height="128"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="128" id="8pg-kA-rgU"/>
+                                <constraint firstAttribute="width" constant="302" id="ZX9-Wa-HtQ"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="14"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="ZRN-xH-RuS" firstAttribute="centerX" secondItem="UTW-GA-61g" secondAttribute="centerX" id="4ed-HS-cyo"/>
+                        <constraint firstAttribute="height" constant="279" id="57e-Dd-5RD"/>
+                        <constraint firstItem="pbN-z5-940" firstAttribute="top" secondItem="VeQ-dh-7Tc" secondAttribute="bottom" constant="5" id="FWn-S6-RmQ"/>
+                        <constraint firstItem="ZRN-xH-RuS" firstAttribute="top" secondItem="UTW-GA-61g" secondAttribute="top" constant="25" id="azk-4f-AyV"/>
+                        <constraint firstItem="VeQ-dh-7Tc" firstAttribute="centerX" secondItem="UTW-GA-61g" secondAttribute="centerX" id="het-2O-OkZ"/>
+                        <constraint firstItem="pbN-z5-940" firstAttribute="centerX" secondItem="UTW-GA-61g" secondAttribute="centerX" id="pzf-mm-Q8b"/>
+                        <constraint firstItem="VeQ-dh-7Tc" firstAttribute="top" secondItem="ZRN-xH-RuS" secondAttribute="bottom" constant="10" id="wI8-Ca-4R3"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="0Ni-Uh-OcJ" secondAttribute="trailing" id="5f2-Il-5tN"/>
+                <constraint firstAttribute="bottom" secondItem="0Ni-Uh-OcJ" secondAttribute="bottom" id="9Jt-a3-Cl8"/>
+                <constraint firstItem="0Ni-Uh-OcJ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="BG3-Kh-7Ba"/>
+                <constraint firstAttribute="bottom" secondItem="0Ni-Uh-OcJ" secondAttribute="bottom" id="CGO-n7-vcp"/>
+                <constraint firstItem="UTW-GA-61g" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="Ftl-IH-6DU"/>
+                <constraint firstItem="0Ni-Uh-OcJ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="OLV-uQ-3xI"/>
+                <constraint firstItem="UTW-GA-61g" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="194" id="OQD-TI-DN0"/>
+                <constraint firstAttribute="trailing" secondItem="UTW-GA-61g" secondAttribute="trailing" constant="10" id="XRM-bu-aUX"/>
+                <constraint firstItem="0Ni-Uh-OcJ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="feA-PZ-5A8"/>
+                <constraint firstItem="0Ni-Uh-OcJ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="jG3-hy-dbe"/>
+                <constraint firstAttribute="trailing" secondItem="0Ni-Uh-OcJ" secondAttribute="trailing" id="jzU-JK-EqJ"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="Lbl2" destination="pbN-z5-940" id="PZw-oY-woy"/>
+                <outlet property="lbl1" destination="VeQ-dh-7Tc" id="S5x-ms-meB"/>
+            </connections>
+            <point key="canvasLocation" x="132" y="110.19490254872565"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="forgotpassword_tic" width="144" height="148"/>
+    </resources>
+</document>

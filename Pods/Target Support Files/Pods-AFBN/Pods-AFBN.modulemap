@@ -1,0 +1,6 @@
+framework module Pods_AFBN {
+  umbrella header "Pods-AFBN-umbrella.h"
+
+  export *
+  module * { export * }
+}
