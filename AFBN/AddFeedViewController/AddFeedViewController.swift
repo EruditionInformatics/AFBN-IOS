@@ -161,7 +161,11 @@ class AddFeedViewController: UIViewController,urlrequestprotocol {
             let filePath = String(describing:info["UIImagePickerControllerMediaURL"]!)
             let file_PathArr = filePath.components(separatedBy: ":///")
             self.memberImgVw.image = self.generateThumbnailForVideoAtURL(filePathLocal: (file_PathArr[1] as NSString))
-            self.vidData = self.memberImgVw.image!.jpegData(compressionQuality: 1)
+            //self.vidData = self.memberImgVw.image!.jpegData(compressionQuality: 1)
+            let contents   =  NSData(contentsOfFile:file_PathArr[1])
+            //print(contents as Any)
+            self.vidData = (contents! as Data)
+            
             self.isImage = "2"
         }
     }

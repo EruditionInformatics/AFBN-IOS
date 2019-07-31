@@ -467,7 +467,7 @@ class UrlRequestClass: NSObject {
         
         do {
             
-            request.httpBody = try createBodyWithImageData(with: (parameters as! [String : String]), filePathKey: "feed_vdo", imageData: vidData, boundary: boundary)
+            request.httpBody = try createBodyWithVideoData(with: (parameters as! [String : String]), filePathKey: "feed_vdo", videoData: vidData, boundary: boundary)
             
         } catch let error {
             //print(error.localizedDescription)
@@ -942,17 +942,46 @@ class UrlRequestClass: NSObject {
             }
         }
         
-//        let filename = "user-profile.jpg"
-//
-//        let mimetype = "image/jpg"
+        let filename = "user-profile.jpg"
+
+        let mimetype = "image/jpg"
         
-        let filename = "upload.mov"
-        let mimetype = "video/mov"
         
         body.append("--\(boundary)\r\n")
         body.append("Content-Disposition: form-data; name=\"\(filePathKey)\"; filename=\"\(filename)\"\r\n")
         body.append("Content-Type: \(mimetype)\r\n\r\n")
         body.append(imageData)
+        body.append("\r\n")
+        
+        
+        body.append("--\(boundary)--\r\n")
+        return body
+    }
+    
+    private func createBodyWithVideoData(with parameters: [String: String]?, filePathKey: String, videoData: Data, boundary: String) throws -> Data
+    {
+        var body = Data()
+        
+        
+        if parameters != nil {
+            for (key, value) in parameters! {
+                body.append("--\(boundary)\r\n".data(using: String.Encoding.utf8)!)
+                body.append("Content-Disposition: form-data; name=\"\(key)\"\r\n\r\n".data(using: String.Encoding.utf8)!)
+                body.append("\(value)\r\n".data(using: String.Encoding.utf8)!)
+            }
+        }
+        
+        //        let filename = "user-profile.jpg"
+        //
+        //        let mimetype = "image/jpg"
+        
+        let filename = "upload.mov"
+        let mimetype = "video/mov"
+        
+        body.append("--\(boundary)\r\n".data(using: String.Encoding.utf8)!)
+        body.append("Content-Disposition:form-data; name=\"\(filePathKey)\"; filename=\"\(filename)\"\r\n".data(using: String.Encoding.utf8)!)
+        body.append("Content-Type: \(mimetype)\r\n\r\n".data(using: String.Encoding.utf8)!)
+        body.append(videoData)
         body.append("\r\n")
         
         
